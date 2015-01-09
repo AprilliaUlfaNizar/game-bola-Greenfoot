@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=
+comment0.target=level2()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ level2.\r\n\ \r\n
+comment1.params=
+comment1.target=void\ tampil()
+comment2.params=
+comment2.target=void\ emas()
+comment3.params=
+comment3.target=void\ batu()
+comment4.params=
+comment4.target=void\ dinding()
+numComments=5

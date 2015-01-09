@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ act()
+comment0.text=\r\n\ Act\ -\ do\ whatever\ the\ papan\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.params=
+comment1.target=void\ move()
+comment2.params=
+comment2.target=void\ ambil_nyawa()
+comment3.params=
+comment3.target=void\ ambil_ubur()
+comment4.params=
+comment4.target=void\ ambil_plankton()
+numComments=5

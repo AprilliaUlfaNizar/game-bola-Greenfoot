@@ -1,0 +1,96 @@
+langkah 1
+<> membuat world yang diperlukan (open, level1, end)
+
+langkah 2
+<> membuat tombol play
+<> membuat papan
+	<> papan dapat bergerak kekanan dan kekiri
+	<> papan dapat mengambil bonus dan jebakan yang keluar
+<> membuat actor bola
+	<> bagaimana dapat menjalankan / mengerakkan actor dengan tombol dikeyboard
+	<> bagaimana dapat mantul dinding world
+	<> bagaimana dapat mantul ketika terkena papan
+	<> bagaimana dapat mantul ketika terkena actor dinding dan actor dinding hilang + score bertambah
+	<> bagaimana memunculkan actor sebagai bonus didinding yang baru dihancurkan
+	<> bagaimana dapat menembak ketika tombol x ditekan
+<> membuat actor dinding
+<> membuat actor bonus dan jebakan
+	<> ubur
+	<> plankton
+	<> burger
+<> membuat score
+<> membuat actor nilai dan nyawa
+
+
+
+
+
+
+
+alur pembuatan tutorial
+<> membuat tombol play
+	
+	if(Greenfoot.mouseClicked(this))
+        {
+            level1 l1 = new level1();
+            Greenfoot.setWorld(l1);
+        }
+
+<> membuat score
+
+    public void score()
+    {
+        GreenfootImage score = new GreenfootImage("Nilai " + score_nilai,24,Color.RED,null);
+        setImage(score);
+    }
+
+<> membuat dinding
+
+	-- kosong
+
+<> membuat ubur
+	
+	move(3);
+        setRotation(90);
+        if(isAtEdge())
+        {
+            getWorld().removeObject(this);
+        }
+
+<> membuat tembak
+
+    public void act() 
+    {
+        // Add your action code here.
+        move(2);
+        setRotation(-90);
+        tubruk_dinding();
+        if(isAtEdge())
+        {
+            getWorld().removeObject(this);
+        }
+        if(tabrak == "yes")
+        {
+            getWorld().removeObject(this);
+        }
+    }    
+    public void tubruk_dinding()
+    {
+        Actor din = getOneIntersectingObject(dinding.class);
+        if(din != null)
+        {
+            getWorld().removeObject(din);
+            tabrak = "yes";
+            score.score_nilai += 10;
+        }
+    }
+
+<> membuat papan
+	<> papan bergerak kekanan dan kekiri
+	<> papan dapat mengambil ubur
+	<> papan dapat menembak jika mengambil ubur
+
+<> membuat bola
+	<> bola bergerak kekanan dan kekiri
+	<> bola dapat mantul
+	<> bola dapat mengenai dinding
